@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=monda');
+body{ 
+  opacity:0.6;
+  hieght:100vh;
+}
+ h5{
+margin-left:6px;
+font-size:38px;
+}
+h1{
+  font-size:70px;
+    }
+a{
+font-size: 27px;
+margin-left:5px;
+}
+
+#current-weather-details{
+  text-align:center;
+  margin-top:40px;
+  margin-left:20px;
+  margin-right:20px;
+  width:100%;
+  hieght:100%;
+  
+   
+}
+.clock {
+font-family:monda;
+text-align: center;
+margin:0 auto;
+margin-top:20px;
+font-size:60px;
+padding: 7px;
+width: 70%;
+}
+.date {
+font-family:monda;
+text-align: center;
+margin:0 auto;
+margin-top:20px;
+font-size:60px;
+padding: 7px;
+width: 70%;
+}

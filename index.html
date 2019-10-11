@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="height=device-height, initial-scale=0.68">
+<head>
+<meta charset="utf-8">
+ <link rel="manifest" href="./manifest.json">
+<title>Weather</title>
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+ <div class="clock">
+<span id="hour">02</span>
+<span id="minute">10</span>
+<span id="second">33</span>
+<span id="type">AM</span>
+</div>
+<div class="date">
+<span id="date"></span>
+</div>
+</br>
+<div id="current-weather-details">
+             <h1 id="current-temperature"><b>Allow</b></h1>
+             <h5 id="weather-summary">Me</h5></br>
+             <a id="current-humidity">to</a></br></br>
+             <a id="current-pressure">Fetch</a></br></br>
+             <a id="current-uvIndex">Weather</a></br></br>
+             <a id="current-wind-speed">via</a></br></br>
+             <a id="current-wind-bearing">GPS</a></br>
+             
+             
+ </div>
+<script src="./upup.min.js"></script>
+<script>
+UpUp.start({
+    'content-url': 'offline.html'
+     });
+</script>
+<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
