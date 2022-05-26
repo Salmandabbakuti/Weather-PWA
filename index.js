@@ -30,26 +30,18 @@ function displayWeather(response) {
 }
 
 function getDateTime() {
-  const hours =
-    new Date().getHours() < 10
-      ? `0${new Date().getHours()} `
-      : new Date().getHours();
-  const minutes =
-    new Date().getMinutes() < 10
-      ? `0${new Date().getMinutes()} `
-      : new Date().getMinutes();
-  const seconds =
-    new Date().getSeconds() < 10
-      ? `0${new Date().getSeconds()} `
-      : new Date().getSeconds();
+  let hours = new Date().getHours();
+  const minutes = new Date().getMinutes() < 10 ? `0${new Date().getMinutes()} ` : new Date().getMinutes();
+  const seconds = new Date().getSeconds() < 10 ? `0${new Date().getSeconds()} ` : new Date().getSeconds();
   const ampm = hours >= 12 ? "PM" : "AM";
-  document.getElementById("time").innerHTML = `${hours % 12
-    } : ${minutes} : ${seconds} ${ampm}`;
-  document.getElementById("date").innerHTML = new Date().toDateString();
   // Auto dark mode logic
   if (hours >= 19 || hours <= 5) {
     document.body.style.backgroundColor = "black";
     document.body.style.color = "white";
   }
+  // converting hours into 12 hour format
+  hours = hours % 12 < 10 ? `0${hours % 12}` : hours % 12;
+  document.getElementById("time").innerHTML = `${hours} : ${minutes} : ${seconds} ${ampm}`;
+  document.getElementById("date").innerHTML = new Date().toDateString();
 }
 setInterval(getDateTime, 1000);
